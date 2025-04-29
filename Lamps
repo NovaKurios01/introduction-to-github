@@ -1,0 +1,28 @@
+print("IA: Olá! Sou sua IA simulada. Como posso ajudar? (Digite 'sair' para encerrar)")
+
+while True:
+    comando = input("\nVocê: ").lower()  # Converte para minúsculas
+    
+    if comando == "sair":
+        print("IA: Até logo! Desligando...")
+        break
+    
+    elif "horas" in comando:
+        from datetime import datetime
+        agora = datetime.now().strftime("%H:%M")
+        print(f"IA: Agora são {agora}")
+        
+    elif "clima" in comando:
+        print("IA: Segundo meus sensores, está 25°C com céu parcialmente nublado.")
+        
+    elif "ligar computador" in comando:
+        print("IA: Beep-boop! Computador ligado com sucesso!")
+        
+    elif "piada" in comando:
+        print("IA: Por que o Python não gosta de natureza? Porque prefere seu próprio ambiente virtual!")
+        
+    elif "notícias" in comando:
+        print("IA: Última notícia: IA simulada conquista o mundo dos tutoriais de programação!")
+        
+    else:
+        print("IA: Desculpe, não entendi. Pode reformular?")
